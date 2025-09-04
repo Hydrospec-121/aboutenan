@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Toufique Omar Enan - Profile</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="frame" role="application" aria-label="Profile panel">
+    <!-- ...existing code... -->
+    <div class="topbar">
+      <div class="brand">
+        <div class="logo">EN</div>
+        <div>
+          <h1 style="margin:0">Toufique Omar Enan</h1>
+          <p style="margin:0;font-size:13px;opacity:0.95">Graphics Designer • Digital Marketer</p>
+        </div>
+      </div>
+      <div style="display:flex;gap:12px;align-items:center">
+        <button class="glass-btn" id="themeToggle" title="Toggle dark mode">Dark</button>
+        <a class="glass-btn" href="#contact" style="text-decoration:none;color:inherit">Contact</a>
+      </div>
+    </div>
+
+    <div class="main">
+      <!-- LEFT: Profile card -->
+      <aside class="profile-card" aria-label="Profile card">
+        <div class="avatar" aria-hidden="true">
+          <!-- placeholder initials, replace with img if available -->
+          <div style="font-size:36px;color:rgba(2,6,23,0.9);">TO</div>
+        </div>
+        <div class="meta">
+          <div class="name">Toufique Omar Enan</div>
+          <div class="role">Graphics Designer & Digital Marketer</div>
+          <div class="small" style="margin-top:6px">Based in Bangladesh</div>
+        </div>
+
+        <div class="stats">
+          <div class="chip">Freelance</div>
+          <div class="chip">Open to work</div>
+        </div>
+
+        <div class="left-footer">
+          <button class="glass-btn" onclick="copyEmail()">Copy Email</button>
+          <a class="glass-btn" href="mailto:faruqueenan7102@gmail.com" style="text-decoration:none;color:inherit">Email Me</a>
+        </div>
+
+        <div style="margin-top:14px" class="small">Quick Links</div>
+        <div style="display:flex;gap:10px;margin-top:8px">
+          <a class="glass-btn" href="#projects" style="text-decoration:none;color:inherit">Projects</a>
+          <a class="glass-btn" href="#about" style="text-decoration:none;color:inherit">About</a>
+        </div>
+      </aside>
+
+      <!-- RIGHT: Tabs panel -->
+      <section class="panel" aria-live="polite">
+        <div class="tabs" role="tablist">
+          <button class="tab active" data-tab="about" role="tab" aria-selected="true">About</button>
+          <button class="tab" data-tab="portfolio" role="tab" aria-selected="false">Portfolio</button>
+          <button class="tab" data-tab="contact" role="tab" aria-selected="false">Contact</button>
+        </div>
+
+        <div class="tab-content">
+          <div id="about" class="content">
+            <p class="about-text">I design eye-catching visuals and run growth-focused marketing campaigns. I blend creative visuals with data-driven strategy to help brands stand out online. Currently exploring motion design and UX for marketing.</p>
+            <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
+              <div class="chip">Branding</div>
+              <div class="chip">Social Creatives</div>
+              <div class="chip">Ad Design</div>
+            </div>
+          </div>
+
+          <div id="portfolio" class="content" style="display:none">
+            <div class="grid" aria-live="polite">
+              <div class="tile">
+                <div class="thumb" aria-hidden="true"></div>
+                <h4>Brand Identity Pack</h4>
+                <p>Logo, colors, and stationery for a local startup.</p>
+              </div>
+
+              <div class="tile">
+                <div class="thumb" aria-hidden="true"></div>
+                <h4>Facebook Ad Series</h4>
+                <p>High-converting ad creatives &amp; variations.</p>
+              </div>
+
+              <div class="tile">
+                <div class="thumb" aria-hidden="true"></div>
+                <h4>Landing Page Visuals</h4>
+                <p>Hero visuals &amp; campaign graphics.</p>
+              </div>
+
+              <div class="tile">
+                <div class="thumb" aria-hidden="true"></div>
+                <h4>Motion Teaser</h4>
+                <p>Short animated teaser created for product launch.</p>
+              </div>
+            </div>
+          </div>
+
+          <div id="contact" class="content" style="display:none">
+            <p style="margin-bottom:10px">Want to work together? Reach out via email or drop a message on social.</p>
+            <div class="contact-row">
+              <div class="email-box" id="email">faruqueenan7102@gmail.com</div>
+              <button class="glass-btn" onclick="copyEmail()">Copy</button>
+              <a class="glass-btn" href="mailto:faruqueenan7102@gmail.com" style="text-decoration:none;color:inherit">Open Mail</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</body>
+</html>

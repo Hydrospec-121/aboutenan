@@ -1,0 +1,61 @@
+:root{
+  --bg-solid: #0f1724;
+  --accent-1: #7c3aed;
+  --accent-2: #06b6d4;
+  --glass-1: rgba(255,255,255,0.06);
+  --glass-2: rgba(255,255,255,0.08);
+  --glass-3: rgba(255,255,255,0.04);
+  --glass-border: rgba(255,255,255,0.12);
+  --text-solid: #e6eef8;
+  --muted: #9aa6b2;
+  --shadow: 0 8px 30px rgba(2,6,23,0.6);
+  --glass-blur: 10px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;}
+body{
+  background: linear-gradient(180deg,#071024 0%, #0f1724 50%);
+  color:var(--text-solid);
+  display:flex;align-items:center;justify-content:center;padding:40px;
+}
+
+.frame{width:100%;max-width:1100px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:18px;padding:28px;box-shadow:var(--shadow);backdrop-filter: blur(4px);border:1px solid rgba(255,255,255,0.03)}
+
+.topbar{background:linear-gradient(90deg,var(--accent-1),var(--accent-2));padding:22px;border-radius:12px;color:#fff;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:14px}
+.logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,#fff3 0%, rgba(255,255,255,0.12) 100%);display:grid;place-items:center;color:#081022;font-weight:800;font-size:20px;box-shadow:0 6px 22px rgba(12,20,44,0.4)}
+.brand h1{font-size:22px;margin:0}
+.brand p{margin:0;font-size:13px;opacity:0.95}
+
+.main{display:grid;grid-template-columns:330px 1fr;gap:22px;margin-top:20px;align-items:start}
+.profile-card{background: linear-gradient(180deg,var(--glass-1),var(--glass-2));border-radius:16px;padding:18px;border:1px solid var(--glass-border);backdrop-filter: blur(var(--glass-blur));box-shadow:0 10px 30px rgba(2,6,23,0.6)}
+.avatar{width:100%;height:200px;border-radius:12px;background:linear-gradient(135deg,var(--accent-2),var(--accent-1));display:grid;place-items:center;font-weight:800;color:#02101a;font-size:40px;margin-bottom:14px;overflow:hidden}
+.meta{display:flex;flex-direction:column;gap:8px}
+.meta .name{font-size:20px;font-weight:700}
+.meta .role{font-size:13px;color:var(--muted)}
+.stats{display:flex;gap:8px;margin-top:12px}
+.chip{padding:8px 10px;border-radius:999px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.05);font-weight:600;font-size:13px}
+
+.glass-btn{display:inline-grid;place-items:center;padding:10px 14px;border-radius:12px;border:1px solid rgba(255,255,255,0.08);background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));backdrop-filter: blur(6px);cursor:pointer;font-weight:700;transition:transform .14s ease,box-shadow .14s}
+.glass-btn:hover{transform:translateY(-4px);box-shadow:0 8px 30px rgba(12,22,40,0.45)}
+
+.left-footer{display:flex;gap:10px;margin-top:14px}
+.panel{background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:16px;padding:18px;border:1px solid rgba(255,255,255,0.03);backdrop-filter: blur(var(--glass-blur))}
+.tabs{display:flex;gap:10px;margin-bottom:12px}
+.tab{padding:10px 14px;border-radius:10px;font-weight:700;background:transparent;border:1px solid transparent;color:var(--text-solid);cursor:pointer;transition:all .18s}
+.tab.active{background:linear-gradient(90deg,var(--accent-1),var(--accent-2));color:white;box-shadow:0 8px 22px rgba(12,22,44,0.45)}
+
+.tab-content{padding-top:8px}
+.about-text{color:var(--muted);line-height:1.7}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin-top:10px}
+.tile{border-radius:12px;padding:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.04);backdrop-filter: blur(6px);min-height:110px;display:flex;flex-direction:column;justify-content:space-between}
+.tile .thumb{height:70px;border-radius:8px;background:linear-gradient(135deg,#fff2 0%, rgba(0,0,0,0.12) 100%)}
+.tile h4{margin:8px 0 0;font-size:15px}
+.tile p{margin:6px 0 0;color:var(--muted);font-size:13px}
+
+.contact-row{display:flex;gap:10px;align-items:center}
+.email-box{padding:10px 12px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.04);font-weight:600}
+.small{font-size:13px;color:var(--muted)}
+
+@media (max-width:880px){.main{grid-template-columns:1fr;margin-top:16px}.avatar{height:160px}}
